@@ -9,7 +9,7 @@ const pricingCards = [
     title: "Почасовая аренда",
     price: "10 000₸",
     description: "1 час вождения",
-    image: "http://localhost:3000/images/9.png",
+    image: "http://localhost:3000/images/solo1.png",
     details: ["Профессиональный водитель", "Премиум автомобиль", "Полная безопасность"],
   },
   {
@@ -36,16 +36,17 @@ const pricingCards = [
     title: "Трансфер",
     price: "35 000₸",
     description: "Доставка до пункта назначения",
-    image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&h=400&fit=crop",
+    
+   image: "http://localhost:3000/images/solo3.png",
     details: ["Быстрая доставка", "Удобный маршрут", "Безопасность гарантирована"],
   },
   {
     id: 5,
-    icon: <Moon className="w-8 h-8" />,
+    icon: <Moon className="w-8 h-10" />,
     title: "Ночная аренда",
     price: "Доплата",
     description: "После 22:00 (минимум 3 часа)",
-    image: "https://images.unsplash.com/photo-1489824904134-891ab64532f1?w=600&h=400&fit=crop",
+    image: "http://localhost:3000/images/solo2.jpg",
     details: ["Дополнительная плата", "Минимум 3 часа", "Премиум сервис"],
   },
 ];

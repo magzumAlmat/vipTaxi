@@ -12,14 +12,23 @@ async function startServer() {
   const server = createServer(app);
 
   const isProduction = process.env.NODE_ENV === "production";
-  const publicPath = isProduction
-    ? path.resolve(__dirname, "public")
-    : path.resolve(__dirname, "..", "dist", "public");
+
+  // В продакшене — dist/public
+  // В dev — тоже dist/public (Vite dev не использует этот сервер)
+  const publicPath = path.resolve(__dirname, "..", "dist", "public");
+
+  console.log(`Serving: ${publicPath}`);
 
   app.use(express.static(publicPath));
 
   app.get("*", (req, res) => {
-    res.sendFile(path.join(publicPath, "index.html"));
+    const indexPath = path.join(publicPath, "index.html");
+    res.sendFile(indexPath, (err) => {
+      if (err) {
+        console.error("File not found:", indexPath);
+        res.status(404).send("Page not found");
+      }
+    });
   });
 
   const PORT = process.env.PORT || 3000;
@@ -27,7 +36,6 @@ async function startServer() {
   server.listen(PORT, "0.0.0.0", () => {
     console.log(`Server running on http://localhost:${PORT}`);
     console.log(`Mode: ${isProduction ? "Production" : "Development"}`);
-    console.log(`Serving: ${publicPath}`);
   });
 }
 

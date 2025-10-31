@@ -11,28 +11,23 @@ const defaultSlides = [
   },
   {
     id: 2,
-   image: "http://89.207.250.181:3000/images/2.png",
+   image: "http://89.207.250.181:3000/images/2.webp",
     title: "Hyundai Staria",
     description: "Современный и стильный семейный минивэн",
   },
   {
     id: 3,
-    image: "http://89.207.250.181:3000/images/1.jpg",
+    image: "http://89.207.250.181:3000/images/3.jpg",
     title: " ",
     description: " ",
   },
    {
     id: 4,
-    image: "http://89.207.250.181:3000images/11.png",
+ image: "http://89.207.250.181:3000/images/4.png",
       title: " ",
     description: " ",
   },
-   {
-    id: 5,
-   image: "http://89.207.250.181:3000/images/2.webp",
-     title: " ",
-    description: " ",
-  },
+  
    {
     id: 5,
    image: "http://89.207.250.181:3000/images/3.jpg",
@@ -41,7 +36,7 @@ const defaultSlides = [
   },
    {
     id: 6,
-   image: "http://89.207.250.181:3000/images/4.png",
+   image: "http://89.207.250.181:3000/images/01.jpg",
      title: " ",
     description: " ",
   },

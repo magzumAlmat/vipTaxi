@@ -1,3 +1,4 @@
+// server/index.js
 import express from "express";
 import { createServer } from "http";
 import path from "path";
@@ -10,23 +11,23 @@ async function startServer() {
   const app = express();
   const server = createServer(app);
 
-  // Serve static files from dist/public in production
-  const staticPath =
-    process.env.NODE_ENV === "production"
-      ? path.resolve(__dirname, "public")
-      : path.resolve(__dirname, "..", "dist", "public");
+  const isProduction = process.env.NODE_ENV === "production";
+  const publicPath = isProduction
+    ? path.resolve(__dirname, "public")
+    : path.resolve(__dirname, "..", "dist", "public");
 
-  app.use(express.static(staticPath));
+  app.use(express.static(publicPath));
 
-  // Handle client-side routing - serve index.html for all routes
-  app.get("*", (_req, res) => {
-    res.sendFile(path.join(staticPath, "index.html"));
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(publicPath, "index.html"));
   });
 
-  const port = process.env.PORT || 3000;
+  const PORT = process.env.PORT || 3000;
 
-  server.listen(port, () => {
-    console.log(`Server running on http://localhost:${port}/`);
+  server.listen(PORT, "0.0.0.0", () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+    console.log(`Mode: ${isProduction ? "Production" : "Development"}`);
+    console.log(`Serving: ${publicPath}`);
   });
 }
 

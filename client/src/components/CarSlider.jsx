@@ -5,21 +5,117 @@ import { Button } from "@/components/ui/button";
 const defaultSlides = [
   {
     id: 1,
-    image: "https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=1200&h=600&fit=crop",
+    image: "http://localhost:3000/images/0.png",
     title: "Toyota Alphard",
     description: "Премиум люксовый минивэн с максимальным комфортом",
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1567818735868-e71b99932e29?w=1200&h=600&fit=crop",
+   image: "http://localhost:3000/images/2.png",
     title: "Hyundai Staria",
     description: "Современный и стильный семейный минивэн",
   },
   {
     id: 3,
-    image: "https://images.unsplash.com/photo-1494976866556-6812c9d1c72e?w=1200&h=600&fit=crop",
-    title: "Mercedes-Benz V-Class",
-    description: "Элегантный премиум класс для деловых людей",
+    image: "http://localhost:3000/images/1.png",
+    title: " ",
+    description: " ",
+  },
+   {
+    id: 4,
+    image: "http://localhost:3000/images/11.png",
+      title: " ",
+    description: " ",
+  },
+   {
+    id: 5,
+   image: "http://localhost:3000/images/3.png",
+     title: " ",
+    description: " ",
+  },
+   {
+    id: 5,
+   image: "http://localhost:3000/images/3.png",
+     title: " ",
+    description: " ",
+  },
+   {
+    id: 6,
+   image: "http://localhost:3000/images/4.png",
+     title: " ",
+    description: " ",
+  },
+   {
+    id: 7,
+   image: "http://localhost:3000/images/5.png",
+      title: " ",
+    description: " ",
+  },
+   {
+    id: 8,
+   image: "http://localhost:3000/images/6.png",
+     title: " ",
+    description: " ",
+  },
+   {
+    id: 9,
+   image: "http://localhost:3000/images/7.png",
+      title: " ",
+    description: " ",
+  },
+   {
+    id: 10,
+   image: "http://localhost:3000/images/8.png",
+     title: " ",
+    description: " ",
+  },
+   {
+    id: 11,
+   image: "http://localhost:3000/images/9.png",
+      title: " ",
+    description: " ",
+  },
+   {
+    id: 5,
+   image: "http://localhost:3000/images/11.png",
+     title: " ",
+    description: " ",
+  },
+   {
+    id: 5,
+   image: "http://localhost:3000/images/12.png",
+      title: " ",
+    description: " ",
+  },
+   {
+    id: 5,
+   image: "http://localhost:3000/images/13.png",
+      title: " ",
+    description: " ",
+  },
+   {
+    id: 5,
+   image: "http://localhost:3000/images/14.png",
+    title: " ",
+    description: " ",
+  },
+   {
+    id: 5,
+   image: "http://localhost:3000/images/15.png",
+     title: " ",
+    description: " ",
+  },
+   {
+    id: 5,
+   image: "http://localhost:3000/images/16.png",
+     title: " ",
+    description: " ",
+  },
+   {
+    id: 5,
+   image: "http://localhost:3000/images/2.png",
+     title: " ",
+    description: " ",
   },
 ];
 
@@ -55,7 +151,7 @@ export default function CarSlider({ slides = defaultSlides }) {
   return (
     <div className="relative w-full overflow-hidden rounded-2xl group">
       {/* Slides Container */}
-      <div className="relative h-96 md:h-[500px] w-full overflow-hidden">
+      <div className="relative h-96 md:h-[64rem] w-full overflow-hidden">
         {slides.map((slide, index) => (
           <div
             key={slide.id}

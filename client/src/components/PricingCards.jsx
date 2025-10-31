@@ -9,7 +9,7 @@ const pricingCards = [
     title: "Почасовая аренда",
     price: "10 000₸",
     description: "1 час вождения",
-    image: "https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=600&h=400&fit=crop",
+    image: "http://localhost:3000/images/9.png",
     details: ["Профессиональный водитель", "Премиум автомобиль", "Полная безопасность"],
   },
   {
@@ -52,7 +52,7 @@ const pricingCards = [
 
 export default function PricingCards() {
   return (
-    <section className="py-20">
+    <section id="pricing" className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">Наши услуги и расценки</h2>

@@ -95,8 +95,11 @@ export default function Home() {
                   <div className="w-48 h-48 bg-accent/20 rounded-full blur-3xl animate-pulse" />
                 </div>
                 <div className="relative z-10 text-center">
-                  <div className="text-6xl mb-4">🚗</div>
-                  <p className="text-accent font-semibold">Премиум класс</p>
+                  <img src="/images/17.jpg" alt="mers" />
+
+                  {/* <div className="text-6xl mb-4">🚗</div>
+
+                  <p className="text-accent font-semibold">Премиум класс</p> */}
                 </div>
               </div>
             </div>

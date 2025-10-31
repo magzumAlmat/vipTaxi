@@ -12,24 +12,15 @@ async function startServer() {
   const server = createServer(app);
 
   const isProduction = process.env.NODE_ENV === "production";
-
-  // В продакшене — dist/public
-  // В dev — тоже dist/public (Vite dev не использует этот сервер)
   const publicPath = path.resolve(__dirname, "..", "dist", "public");
 
   console.log(`Serving: ${publicPath}`);
 
+  // Только статика — express сам отдаёт index.html
   app.use(express.static(publicPath));
 
-  app.get("*", (req, res) => {
-    const indexPath = path.join(publicPath, "index.html");
-    res.sendFile(indexPath, (err) => {
-      if (err) {
-        console.error("File not found:", indexPath);
-        res.status(404).send("Page not found");
-      }
-    });
-  });
+  // УДАЛИ ВСЁ НИЖЕ — express.static уже всё делает
+  // app.get("*", ...) — НЕ НУЖНО
 
   const PORT = process.env.PORT || 3000;
 

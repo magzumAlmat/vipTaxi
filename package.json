@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "vite --host",
-    "build": "vite build && rm -rf dist/server && mkdir -p dist/server && esbuild server/index.js --platform=node --bundle --format=esm --outfile=dist/server/index.js --minify",
+    "build": "vite build && rm -rf dist/server && mkdir -p dist/server && esbuild server/index.js --platform=node --bundle --packages=external --format=esm --outfile=dist/server/index.js --minify",
     "start": "NODE_ENV=production node dist/server/index.js",
     "preview": "vite preview --host",
     "start:raw": "NODE_ENV=production node server/index.js"

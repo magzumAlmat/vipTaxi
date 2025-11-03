@@ -5,7 +5,7 @@ import { MapPin, Phone, Clock, Star, Zap, Shield, Users } from "lucide-react";
 import PricingCards from "@/components/PricingCards";
 import Reviews from "@/components/Reviews";
 import CarSlider from "@/components/CarSlider";
-import Link from "next/link";
+import { Link } from "wouter";
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);

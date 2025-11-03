@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Clock, MapPin, Camera, Car, Moon } from "lucide-react";
-import Link from "next/link";
+import { Link } from "wouter";
 const pricingCards = [
   {
     id: 1,

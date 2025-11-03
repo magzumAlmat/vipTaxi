@@ -6,6 +6,7 @@ import PricingCards from "@/components/PricingCards";
 import Reviews from "@/components/Reviews";
 import CarSlider from "@/components/CarSlider";
 import Link from "next/link";
+
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
   const [activeTab, setActiveTab] = useState("features");

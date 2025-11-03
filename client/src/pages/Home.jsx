@@ -5,7 +5,7 @@ import { MapPin, Phone, Clock, Star, Zap, Shield, Users } from "lucide-react";
 import PricingCards from "@/components/PricingCards";
 import Reviews from "@/components/Reviews";
 import CarSlider from "@/components/CarSlider";
-import { Link } from "wouter";
+
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
@@ -39,10 +39,11 @@ export default function Home() {
               Контакты
             </a>
           </div>
-          
+          <a href="tel:+77073954946">
           <Button className="bg-accent hover:bg-accent/90 text-accent-foreground">
             Заказать
           </Button>
+          </a>
         </div>
       </nav>
 
@@ -76,12 +77,12 @@ export default function Home() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-               <Link href="tel:+77073954946">
+              <a href="tel:+77073954946">
                 <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
                   Заказать сейчас
                 </Button>
-                </Link>
-                <Link href="tel:+77073954946">
+                </a>
+                <a href="tel:+77073954946">
                 <Button
                   size="lg"
                   variant="outline"
@@ -89,7 +90,7 @@ export default function Home() {
                 >
                   Узнать больше
                 </Button>
-                </Link>
+                </a>
               </div>
             </div>
 
@@ -201,11 +202,11 @@ export default function Home() {
             {/* <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
               Скачать приложение
             </Button> */}
-            <Link href="tel:+77073954946">
-            <Button size="lg" variant="outline" className="border-accent/30">
+            <a href="tel:+77073954946">
+            <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
               Заказать по телефону
             </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </section>

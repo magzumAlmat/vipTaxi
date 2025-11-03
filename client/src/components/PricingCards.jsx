@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Clock, MapPin, Camera, Car, Moon } from "lucide-react";
-
+import Link from "next/link";
 const pricingCards = [
   {
     id: 1,
@@ -105,9 +105,11 @@ export default function PricingCards() {
                 </ul>
 
                 {/* Button */}
+                  <Link href="tel:+77073954946">
                 <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
                   Заказать
                 </Button>
+                </Link>
               </div>
             </Card>
           ))}

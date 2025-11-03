@@ -5,7 +5,7 @@ import { MapPin, Phone, Clock, Star, Zap, Shield, Users } from "lucide-react";
 import PricingCards from "@/components/PricingCards";
 import Reviews from "@/components/Reviews";
 import CarSlider from "@/components/CarSlider";
-
+import Link from "next/link";
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
   const [activeTab, setActiveTab] = useState("features");
@@ -38,6 +38,7 @@ export default function Home() {
               Контакты
             </a>
           </div>
+          
           <Button className="bg-accent hover:bg-accent/90 text-accent-foreground">
             Заказать
           </Button>
@@ -74,9 +75,12 @@ export default function Home() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
+               <Link href="tel:+77073954946">
                 <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
                   Заказать сейчас
                 </Button>
+                </Link>
+                <Link href="tel:+77073954946">
                 <Button
                   size="lg"
                   variant="outline"
@@ -84,6 +88,7 @@ export default function Home() {
                 >
                   Узнать больше
                 </Button>
+                </Link>
               </div>
             </div>
 
@@ -192,12 +197,14 @@ export default function Home() {
             Заказите такси прямо сейчас и получите скидку 10% на первую поездку
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
+            {/* <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
               Скачать приложение
-            </Button>
+            </Button> */}
+            <Link href="tel:+77073954946">
             <Button size="lg" variant="outline" className="border-accent/30">
               Заказать по телефону
             </Button>
+            </Link>
           </div>
         </div>
       </section>
